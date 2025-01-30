@@ -1,8 +1,10 @@
-# Quizzzzz Application
+# Quizzzzz Application 🗿
 
-Welcome to the Quiz App! This application is designed to provide an interactive and engaging way to test your knowledge on various topics. Built with modern technologies, this app ensures a smooth and responsive user experience.
+[https://quiz-app-main-delta.vercel.app]()
 
-## Table of Contents
+Welcome to the Quizzzzz App! Just a Dumb Quizzzzz app 🗿.
+
+## Table of Contents 🗿
 
 - [Demo](#demo)
 - [Features](#features)
@@ -10,9 +12,9 @@ Welcome to the Quiz App! This application is designed to provide an interactive 
 - [API](#api)
 - [Getting Started](#getting-started)
 
-## Demo
+## Demo 🗿
 
-Check out the live demo of the Quiz App [here]().
+Check out the live demo of the Quiz App [(https://quiz-app-main-delta.vercel.app]()).
 
 ![1738266094764](image/README/1738266094764.png)
 
@@ -22,14 +24,14 @@ Check out the live demo of the Quiz App [here]().
 
 ![1738266299295](image/README/1738266299295.png)
 
-## Features
+## Features 🗿
 
 - Interactive quizzes with multiple choice questions
 - Real-time feedback on answers
 - Score tracking and result display
 - Responsive design for all devices
 
-## Tech Stack
+## Tech Stack 🗿
 
 - **Framework**: [Next.js 14](https://nextjs.org/)
 - **Styling**: [TailwindCSS](https://tailwindcss.com/)
@@ -37,18 +39,18 @@ Check out the live demo of the Quiz App [here]().
 - **State Management**: [Zustand](https://zustand-demo.pmnd.rs/)
 - **UI Components**: [Shad CN/UI](https://ui.shadcn.com/)
 
-## Getting Started
+## Getting Started 🗿
 
 To get a local copy up and running, follow these simple steps.
 
-### Prerequisites
+### Prerequisites 🗿
 
 Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v14 or later)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### Installation
+### Installation 🗿
 
 1. Clone the repository
 
@@ -72,7 +74,7 @@ Ensure you have the following installed:
    yarn install
    ```
 
-### Usage
+### Usage 🗿
 
 1. Start the development server
 
@@ -87,7 +89,7 @@ Ensure you have the following installed:
    ```
 2. Open [http://localhost:3000](http://localhost:3000) with your browser to see the app in action.
 
-### Building for Production
+### Building for Production 🗿
 
 To create a production build, run:
 
