@@ -29,15 +29,26 @@ const ResultModal = () => {
           <p className="text-lg md:2xl text-primary font-semibold tracking-wide">
             You scored: {`${additionalData?.score}/${additionalData?.limit}`}
           </p>
+          <div className="flex gap-4">
           <Button
             onClick={() => {
               router.push("/");
               onClose();
             }}
-            className="mt-3 md:mt-5"
+            className="mt-3 w-36 md:mt-5"
           >
             Play Again
           </Button>
+          <Button
+            onClick={() => {
+              router.push("/solutions");
+              onClose();
+            }}
+            className="mt-3 w-36 md:mt-5"
+          >
+            View Solutions
+          </Button>  
+            </div>        
         </div>
       </DialogContent>
     </Dialog>

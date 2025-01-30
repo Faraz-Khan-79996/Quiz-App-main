@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { categoryOptions, difficultyOptions } from "@/constants";
+import Link from "next/link";
 
 const QuizSettings = () => {
   const router = useRouter();
@@ -69,6 +70,9 @@ const QuizSettings = () => {
       <Button onClick={handleQuizStart}>
         Start Quiz
       </Button>
+      <Link href="/solutions" className="text-sm font-semibold">
+        View Solutions
+      </Link>      
     </div>
   );
 };

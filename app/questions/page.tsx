@@ -61,6 +61,7 @@ async function getData() {
       difficulty: question.difficulty_level ?? "unknown", // Default to "unknown" if null
       regions: [], // No data available, so set an empty array
       isNiche: false, // No field available, setting default to false
+      detailed_solution : question.detailed_solution,
     }));
   }
   const usableQuestions = mapQuizToUsableQuestions(quizData);
@@ -101,11 +102,13 @@ const QuestionsPage = async () => {
   
 
   return (
+    <div className="h-screen w-full flex flex-col items-center justify-center">
     <Questions
       questions={queestionsArray}
       limit={limit}
       category={category}
-    />
+    />      
+    </div>
   );
 };
 

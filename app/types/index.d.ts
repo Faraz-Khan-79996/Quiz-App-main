@@ -98,6 +98,7 @@ declare global {
         difficulty: string;
         regions: any[]; // [] alone is ambiguous, use `any[]` or specify a type
         isNiche: boolean;
+        detailed_solution: string;
       }      
   }
   
