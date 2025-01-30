@@ -14,19 +14,20 @@ import { categoryOptions, difficultyOptions } from "@/constants";
 
 const QuizSettings = () => {
   const router = useRouter();
-  const [category, setCategory] = useState<string>("");
-  const [difficulty, setDifficulty] = useState<string>("");
-  const [limit, setLimit] = useState([10]);
+  // const [category, setCategory] = useState<string>("");
+  // const [difficulty, setDifficulty] = useState<string>("medium");
+  // const [limit, setLimit] = useState([10]);
 
   const handleQuizStart = () => {
     router.push(
-      `/questions?category=${category}&difficulty=${difficulty}&limit=${limit[0]}`
+      // `/questions?category=${category}&difficulty=${difficulty}&limit=${limit[0]}`
+      `/questions`
     );
   };
 
   return (
     <div className="flex flex-col justify-center items-center gap-4 md:gap-6">
-      <Select value={category} onValueChange={(value) => setCategory(value)}>
+      {/* <Select value={category} onValueChange={(value) => setCategory(value)}>
         <SelectTrigger className="w-full md:max-w-xs xl:max-w-md">
           <SelectValue placeholder="Category" />
         </SelectTrigger>
@@ -63,8 +64,9 @@ const QuizSettings = () => {
         step={5}
         min={5}
         className="w-full md:max-w-xs xl:max-w-md"
-      />
-      <Button disabled={!difficulty || !category} onClick={handleQuizStart}>
+      /> */}
+      {/* <Button disabled={!difficulty || !category} onClick={handleQuizStart}>*/}
+      <Button onClick={handleQuizStart}>
         Start Quiz
       </Button>
     </div>

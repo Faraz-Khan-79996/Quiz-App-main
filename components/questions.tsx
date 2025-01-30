@@ -11,18 +11,7 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { toast } from "sonner";
 
 type Props = {
-  questions: {
-    category: string;
-    id: string;
-    correctAnswer: string;
-    incorrectAnswers: string[];
-    question: string;
-    tags: string[];
-    type: string;
-    difficulty: string;
-    regions: [];
-    isNiche: boolean;
-  }[];
+  questions: UsableQuestion[];
   limit: number;
   category: string;
 };
@@ -105,7 +94,7 @@ const Questions = ({ questions, limit, category }: Props) => {
       <Progress value={progressValue} />
       <div className="flex justify-between items-center h-20 text-sm md:text-base">
         <div className="space-y-1">
-          <p>Category: {showCategory(category)}</p>
+          <p>Topic: {category}</p>
           <p>Score: {score}</p>
         </div>
         <CountdownCircleTimer
