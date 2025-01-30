@@ -90,62 +90,69 @@ const Questions = ({ questions, limit, category }: Props) => {
   }
 
   return (
-    <div className="bg-white px-3 py-5 md:p-6 shadow-md w-full md:w-[80%] lg:w-[70%] max-w-5xl sm:rounded-lg">
-      <Progress value={progressValue} />
-      <div className="flex justify-between items-center h-20 text-sm md:text-base">
-        <div className="space-y-1">
-          <p>Topic: {category}</p>
-          <p>Score: {score}</p>
-        </div>
-        <CountdownCircleTimer
-          key={key}
-          isPlaying={!selected}
-          duration={15}
-          size={45}
-          strokeWidth={4}
-          colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
-          colorsTime={[15, 8, 3, 0]}
-          onComplete={handleTimeUp}
-        >
-          {({ remainingTime }) => (
-            <div className="text-center">{remainingTime}</div>
-          )}
-        </CountdownCircleTimer>
-      </div>
-      <Separator />
-      <div className="min-h-[50vh] py-4 xl:py-8 px-3 md:px-5 w-full">
-        <h2 className="text-2xl text-center font-medium">{`Q${curr + 1}. ${
-          questions[curr].question
-        }`}</h2>
-        <div className="py-4 md:py-5 xl:py-7 flex flex-col gap-y-3 md:gap-y-5">
-          {answers.map((answer, i) => (
-            <button
-              key={i}
-              className={`option ${selected && handleSelect(answer)}`}
-              disabled={!!selected}
-              onClick={() => handleCheck(answer)}
-            >
-              {alphabeticNumeral(i)}
-              {answer}
-            </button>
-          ))}
-        </div>
-        <Separator />
-        <div className="flex mt-5 md:justify-between md:flex-row flex-col gap-4 md:gap-0 mx-auto max-w-xs w-full">
-          <Button
-            disabled={!selected}
-            onClick={() =>
-              questions.length === curr + 1 ? handleShowResult() : handleNext()
-            }
-          >
-            {questions.length - 1 != curr ? "Next Question" : "Show Results"}
-          </Button>
-          <Button variant={"destructive"} onClick={handleQuit}>
-            Quit Quiz
-          </Button>
-        </div>
-      </div>
+<div className="bg-gray-800 px-3 py-5 md:p-6 shadow-md w-full md:w-[80%] lg:w-[70%] max-w-5xl sm:rounded-lg">
+  <Progress value={progressValue} className="bg-gray-700" />
+  <div className="flex justify-between items-center h-20 text-sm md:text-base text-gray-100">
+    <div className="space-y-1">
+      <p>Topic: {category}</p>
+      <p>Score: {score}</p>
     </div>
+    <CountdownCircleTimer
+      key={key}
+      isPlaying={!selected}
+      duration={15}
+      size={45}
+      strokeWidth={4}
+      colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
+      colorsTime={[15, 8, 3, 0]}
+      onComplete={handleTimeUp}
+    >
+      {({ remainingTime }) => (
+        <div className="text-center text-gray-100">{remainingTime}</div>
+      )}
+    </CountdownCircleTimer>
+  </div>
+  <Separator className="bg-gray-700" />
+  <div className="min-h-[50vh] py-4 xl:py-8 px-3 md:px-5 w-full">
+    <h2 className="text-2xl text-center font-medium text-gray-100">{`Q${curr + 1}. ${
+      questions[curr].question
+    }`}</h2>
+    <div className="py-4 md:py-5 xl:py-7 flex flex-col gap-y-3 md:gap-y-5">
+      {answers.map((answer, i) => (
+        <button
+          key={i}
+          className={`option ${
+            selected && handleSelect(answer)
+          } bg-gray-700 text-gray-100 hover:bg-gray-400 transition-colors duration-100`}
+          disabled={!!selected}
+          onClick={() => handleCheck(answer)}
+        >
+          {alphabeticNumeral(i)}
+          {answer}
+        </button>
+      ))}
+    </div>
+    <Separator className="bg-gray-700" />
+    <div className="flex mt-5 md:justify-between md:flex-row flex-col gap-4 md:gap-0 mx-auto max-w-xs w-full">
+      <Button
+        disabled={!selected}
+        onClick={() =>
+          questions.length === curr + 1 ? handleShowResult() : handleNext()
+        }
+        className="bg-blue-600 hover:bg-blue-700 text-gray-100"
+      >
+        {questions.length - 1 != curr ? "Next Question" : "Show Results"}
+      </Button>
+      <Button
+        variant={"destructive"}
+        onClick={handleQuit}
+        className="bg-red-600 hover:bg-red-700 text-gray-100"
+      >
+        Quit Quiz
+      </Button>
+    </div>
+  </div>
+</div>
   );
 };
 

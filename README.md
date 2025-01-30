@@ -1,4 +1,4 @@
-# Quiz App
+# Quizzzzz Application
 
 Welcome to the Quiz App! This application is designed to provide an interactive and engaging way to test your knowledge on various topics. Built with modern technologies, this app ensures a smooth and responsive user experience.
 
@@ -9,13 +9,18 @@ Welcome to the Quiz App! This application is designed to provide an interactive 
 - [Tech Stack](#tech-stack)
 - [API](#api)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Demo
 
-Check out the live demo of the Quiz App [here](https://quizy-yusha.vercel.app/).
+Check out the live demo of the Quiz App [here]().
+
+![1738266094764](image/README/1738266094764.png)
+
+![1738266237751](image/README/1738266237751.png)
+
+![1738266269971](image/README/1738266269971.png)
+
+![1738266299295](image/README/1738266299295.png)
 
 ## Features
 
@@ -32,10 +37,6 @@ Check out the live demo of the Quiz App [here](https://quizy-yusha.vercel.app/).
 - **State Management**: [Zustand](https://zustand-demo.pmnd.rs/)
 - **UI Components**: [Shad CN/UI](https://ui.shadcn.com/)
 
-## API
-
-This project uses [The Trivia API](https://the-trivia-api.com/) to fetch quiz questions.
-
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
@@ -50,18 +51,23 @@ Ensure you have the following installed:
 ### Installation
 
 1. Clone the repository
+
    ```sh
-   git clone https://github.com/yusha0123/Quiz-App.git
+   git clone https://github.com/Faraz-Khan-79996/Quiz-App-main.git
    ```
 2. Navigate to the project directory
+
    ```sh
-   cd Quiz-App
+   cd Quiz-App-main
    ```
 3. Install dependencies
+
    ```sh
    npm install
    ```
+
    or
+
    ```sh
    yarn install
    ```
@@ -69,10 +75,13 @@ Ensure you have the following installed:
 ### Usage
 
 1. Start the development server
+
    ```sh
    npm run dev
    ```
+
    or
+
    ```sh
    yarn dev
    ```
@@ -81,29 +90,13 @@ Ensure you have the following installed:
 ### Building for Production
 
 To create a production build, run:
+
 ```sh
 npm run build
 ```
+
 or
+
 ```sh
 yarn build
 ```
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Yusha Tahlil - [LinkedIn](https://www.linkedin.com/in/yusha-tahlil/)
-Project Link: [https://github.com/yusha0123/Quiz-App](https://github.com/yusha0123/Quiz-App)

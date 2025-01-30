@@ -3,6 +3,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import BackButton from '@/components/ui/BackButton';
+import ParticlesBackground from '@/components/ui/ParticlesBackground';
 
 async function getData() {
   const res = await fetch(`https://api.jsonserve.com/Uw5CrX`, {
@@ -45,28 +46,40 @@ const SolutionsPage = async () => {
   const questionsArray: UsableQuestion[] = await getData();
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      {/* Include the BackButton component */}
-      <BackButton />
+    <div className="min-h-screen bg-gray-900 text-white p-6 relative overflow-hidden">
+      {/* Particles Background */}
+      <div className="absolute inset-0 z-0">
+        <ParticlesBackground />
+      </div>
 
-      <h1 className="text-4xl font-bold text-center mb-8">Solutions</h1>
-      <div className="max-w-4xl mx-auto space-y-8">
-        {questionsArray.map((q, index) => (
-          <div key={q.id} className="bg-gray-800 p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-2"> Q{index + 1}. {q.question}</h2>
-            <p className="text-green-400 font-medium">
-              <span className="font-semibold text-white">Correct Answer:</span>{" "}
-              {q.correctAnswer}
-            </p>
-            <div className="mt-4 p-4 bg-gray-700 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Detailed Solution</h3>
-              <div className="prose prose-invert max-w-none text-gray-300">
-                {/* Rendering the markdown solution */}
-                <ReactMarkdown>{q.detailed_solution}</ReactMarkdown>
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Back Button */}
+        <BackButton />
+
+        {/* Main Content */}
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h1 className="text-4xl font-bold text-center mb-8">Solutions</h1>
+            {questionsArray.map((q, index) => (
+              <div key={q.id} className="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 className="text-xl font-semibold mb-2">
+                  Q{index + 1}. {q.question}
+                </h2>
+                <p className="text-green-400 font-medium">
+                  <span className="font-semibold text-white">Correct Answer:</span>{" "}
+                  {q.correctAnswer}
+                </p>
+                <div className="mt-4 p-4 bg-gray-700 rounded-lg">
+                  <h3 className="text-lg font-semibold mb-2">Detailed Solution</h3>
+                  <div className="prose prose-invert max-w-none text-gray-300">
+                    <ReactMarkdown>{q.detailed_solution}</ReactMarkdown>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

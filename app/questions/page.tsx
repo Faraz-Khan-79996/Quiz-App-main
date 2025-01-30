@@ -2,6 +2,7 @@ import Questions from "@/components/questions";
 import { categoryOptions, difficultyOptions } from "@/constants";
 import { redirect } from "next/navigation";
 import "./questions.css";
+import ParticlesBackground from "@/components/ui/ParticlesBackground";
 
 
 export const fetchCache = "force-no-store";
@@ -95,19 +96,27 @@ const QuestionsPage = async () => {
   //   return redirect("/");
   // }
 
-  const queestionsArray:UsableQuestion[] = await getData();
-  // console.log(queestionsArray);
-  const limit = queestionsArray.length
-  const category = queestionsArray[0].category;
+  const questionsArray:UsableQuestion[] = await getData();
+  // console.log(questionsArray);
+  const limit = questionsArray.length
+  const category = questionsArray[0].category;
   
 
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center">
-    <Questions
-      questions={queestionsArray}
-      limit={limit}
-      category={category}
-    />      
+    <div className="h-screen w-full relative overflow-hidden">
+      {/* Particles Background */}
+      <div className="absolute inset-0 z-0">
+        <ParticlesBackground />
+      </div>
+
+      {/* Questions Component */}
+      <div className="relative z-10 h-full w-full flex flex-col items-center justify-center">
+        <Questions
+          questions={questionsArray}
+          limit={limit}
+          category={category}
+        />
+      </div>
     </div>
   );
 };
