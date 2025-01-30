@@ -1,6 +1,6 @@
 # Quizzzzz Application 🗿
 
-[https://quiz-app-main-delta.vercel.app]()
+[https://quiz-app-main-delta.vercel.app](https://quiz-app-main-delta.vercel.app/)
 
 Welcome to the Quizzzzz App! Just a Dumb Quizzzzz app 🗿.
 
@@ -14,7 +14,7 @@ Welcome to the Quizzzzz App! Just a Dumb Quizzzzz app 🗿.
 
 ## Demo 🗿
 
-Check out the live demo of the Quiz App [(https://quiz-app-main-delta.vercel.app]()).
+Check out the live demo of the Quiz App [(https://quiz-app-main-delta.vercel.app](https://quiz-app-main-delta.vercel.app/)).
 
 ![1738266094764](image/README/1738266094764.png)
 
