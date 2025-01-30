@@ -2,6 +2,8 @@
 
 [https://quiz-app-main-delta.vercel.app](https://quiz-app-main-delta.vercel.app/)
 
+My Portfolio : [https://faraz-portfolio-seven.vercel.app/](https://faraz-portfolio-seven.vercel.app/)
+
 Welcome to the Quizzzzz App! Just a Dumb Quizzzzz app 🗿.
 
 ## Table of Contents 🗿
