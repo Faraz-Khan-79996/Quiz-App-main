@@ -18,6 +18,8 @@ Welcome to the Quizzzzz App! Just a Dumb Quizzzzz app 🗿.
 
 Check out the live demo of the Quiz App [(https://quiz-app-main-delta.vercel.app](https://quiz-app-main-delta.vercel.app/)).
 
+Video Link : [https://youtu.be/k22ecmBJ4Qo](https://youtu.be/k22ecmBJ4Qo)
+
 ![1738266094764](image/README/1738266094764.png)
 
 ![1738266237751](image/README/1738266237751.png)
